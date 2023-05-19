@@ -19,17 +19,17 @@ class ExpensesList extends StatelessWidget {
       itemCount: expenses.length,
       itemBuilder: (ctx, index) => Dismissible(
         key: ValueKey(expenses[index]),
-        direction: DismissDirection.endToStart,
+        direction: DismissDirection.startToEnd,
         background: Container(
           color: Theme.of(context).colorScheme.error.withOpacity(.75),
           margin: EdgeInsets.symmetric(
             horizontal: Theme.of(context).cardTheme.margin!.horizontal,
           ),
           child: const Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
+                padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
                 child: Icon(Icons.delete),
               ),
             ],
